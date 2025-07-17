@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Excel Editor</title>
+  <title>Editable Excel Viewer</title>
   <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+  <style>
+    table, th, td {
+      border: 1px solid #aaa;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+    td {
+      min-width: 80px;
+    }
+  </style>
 </head>
 <body>
-  <h2>Excel Viewer</h2>
+  <h2>Editable Excel Table</h2>
   <input type="file" id="upload" />
-  <div id="output"></div>
+  <br><br>
+  <div id="table-container"></div>
+  <br>
+  <button onclick="saveExcel()">💾 Save Edited Excel</button>
+
   <script src="script.js"></script>
 </body>
 </html>
